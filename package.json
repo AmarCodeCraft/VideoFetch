@@ -1,0 +1,16 @@
+{
+  "name": "videofetch",
+  "private": true,
+  "version": "1.0.0",
+  "description": "VideoFetch — fetch, search, watch, and download YouTube videos with offline support",
+  "scripts": {
+    "install:all": "npm install && npm --prefix frontend install && npm --prefix server run setup",
+    "dev": "concurrently -k -n CLIENT,SERVER -c blue,magenta \"npm --prefix frontend run dev\" \"npm --prefix server run dev\"",
+    "dev:client": "npm --prefix frontend run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
